@@ -1,3 +1,41 @@
+.loader {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at bottom, #9fb8d1 0%, #157496 100% );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 10px;
+  /* Couper le cercle  */
+  stroke-dasharray: 100;
+  /*Décaler les pointillés*/
+  stroke-dashoffset: 150;
+  animation: rotation 1800ms ease-in-out infinite alternate;
+}
+
+@keyframes rotation {
+  0%{
+      stroke-dasharray: 100;
+      stroke-dashoffset: 70;
+  }
+  /* Changement endroit des pointillés */
+  100%{
+      stroke-dasharray: 100;
+      stroke-dashoffset: -800;
+  }
+}
+
+/*Classe que l'on ajoute pour faire transition de fin*/
+.ended {   
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
 body {
   font-family: sans-serif;
   background-color: #315481;
