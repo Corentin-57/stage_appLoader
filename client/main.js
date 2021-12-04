@@ -9,7 +9,7 @@ function onDeviceReady() {
 
 setTimeout(()=> {
   handle.release();
-}, 10000);
+}, 5000);
 
 
 
